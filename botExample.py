@@ -34,10 +34,7 @@ def format_currency(value):
 #Function that starts with command /start
 @bot.message_handler(commands=['start']) 
 def send_welcome(message):
-	bot.send_message(message.chat.id, 
-      """
-	Hola, soy un 🤖 de Ejemplo.
-	Puedes preguntar lo siguiente:⬇️\n/info\nPara conocer las funciones de este bot\n/info2\nPara conocer el menú botones\n/info3\npara conocer el panel""")
+	bot.send_message(message.chat.id, "Hola, soy un 🤖 de Ejemplo.\nPuedes preguntar lo siguiente:⬇️\n/info\nPara conocer las funciones de este bot\n/info2\nPara conocer el menú botones\n/info3\npara conocer el panel")
 
 # Función de información
 # Information function
