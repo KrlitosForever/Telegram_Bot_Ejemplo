@@ -40,11 +40,10 @@ def send_welcome(message):
 		Puedes preguntar lo siguiente:⬇️
 		/info
 		Para conocer las funciones de este bot.
-        /info2
-        Para conocer el menú botones
-        /info3
-        para conocer el panel
-		
+            /info2
+            Para conocer el menú botones
+            /info3
+            para conocer el panel
 	""")
 
 # Función de información
@@ -159,3 +158,4 @@ def video(message):
      except Exception as e:
         bot.send_message(message.chat.id, f"Error al enviar el video: {str(e)}")
 
+bot.infinity_polling()
