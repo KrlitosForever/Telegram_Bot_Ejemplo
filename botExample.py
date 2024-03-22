@@ -36,15 +36,15 @@ def format_currency(value):
 def send_welcome(message):
 	bot.send_message(message.chat.id, 
 		"""
-		Hola, soy un 🤖 de Ejemplo.
-		Puedes preguntar lo siguiente:⬇️
-		/info
-		Para conocer las funciones de este bot.
-            /info2
-            Para conocer el menú botones
-            /info3
-            para conocer el panel
-	""")
+	Hola, soy un 🤖 de Ejemplo.
+	Puedes preguntar lo siguiente:⬇️
+	/info
+      Para conocer las funciones de este bot
+      /info2
+      Para conocer el menú botones
+      /info3
+      para conocer el panel
+	      """)
 
 # Función de información
 # Information function
