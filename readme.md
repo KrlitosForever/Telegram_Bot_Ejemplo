@@ -1,5 +1,7 @@
 # <p align="center"> Telegram Bot Ejemplo </p>
 
+[![🚀 Deploy Server](https://github.com/KrlitosForever/Telegram_Bot_Ejemplo/actions/workflows/master.yml/badge.svg)](https://github.com/KrlitosForever/Telegram_Bot_Ejemplo/actions/workflows/master.yml)
+
 <p align="center">Bot de Telegram destinado a ser una guía a todos aquellos que están aprendido a utilizar la librería telebot.
 
 * [Pasos previos.](#pasos-previos)
