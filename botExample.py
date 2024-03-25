@@ -53,7 +53,7 @@ def info(message):
 
 # Función de mensaje
 # Message function
-@bot.message_handler(commands=["/message"])
+@bot.message_handler(commands=["message"])
 def mensaje(message):
     try:
         bot.send_message(message.chat.id, "Hola 👋 este es un ejemplo de mensaje")
@@ -64,7 +64,7 @@ def mensaje(message):
 
 # Función de documento
 # Document function
-@bot.message_handler(commands=["/document"])
+@bot.message_handler(commands=["document"])
 def documento(message):
     try:
         ruta_documento = "/docPdf.pdf"
@@ -77,7 +77,7 @@ def documento(message):
 
 # Función de contacto
 # Contact function
-@bot.message_handler(commands=["/contact"])
+@bot.message_handler(commands=["contact"])
 def contacto(message):
     try:
         carlos = "Carlos Carrasco"
@@ -90,7 +90,7 @@ def contacto(message):
 
 # Función de audio
 # Audio function
-@bot.message_handler(commands=["/audio"])
+@bot.message_handler(commands=["audio"])
 def audio(message):
     try:
         # Ruta del archivo de audio en formato M4A que deseas enviar
@@ -104,7 +104,7 @@ def audio(message):
 
 # Función de ubicación
 # Location function
-@bot.message_handler(commands=["/location"])
+@bot.message_handler(commands=["location"])
 def location(message):
     try:
         latitude = -33.43768005616671
@@ -118,7 +118,7 @@ def location(message):
 
 # Función de imagen
 # Image function
-@bot.message_handler(commands=["/image"])
+@bot.message_handler(commands=["image"])
 def imagen(message):
     try:
         ruta_imagen = "image.jpg"
@@ -131,7 +131,7 @@ def imagen(message):
 
 # Función de video
 # Video function
-@bot.message_handler(commands=["/video"])
+@bot.message_handler(commands=["video"])
 def video(message):
     try:
         video_ruta = "video.mp4"
