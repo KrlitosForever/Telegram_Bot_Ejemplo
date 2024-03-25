@@ -41,22 +41,7 @@ def send_welcome(message):
 @bot.message_handler(commands=['info'])
 def info(message):
       bot.send_message(message.chat.id, 
-            """
-            /message
-            Esta función envía una foto
-            /document
-            Esta función envía un documento
-            /contact
-            Esta función envía un contacto
-            /audio
-            Esta función envía un audio
-            /location
-            Esta función envía una ubicación
-            /Photo
-            Esta función envía una foto
-            /video
-            Esta función envía un video
-            """)
+            "/mEsta función envía una foto\n/document\nEsta función envía un documento\n/contact\nEsta función envía un contacto\n/audio\nEsta función envía un audio\n/location\nEsta función envía una ubicación\n/Photo\nEsta función envía una foto\n/video\nEsta función envía un video")
 
 # Función de mensaje
 # Message function
