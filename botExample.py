@@ -45,8 +45,11 @@ def send_welcome(message):
 # Information function
 @bot.message_handler(commands=["info"])
 def info(message):
-      bot.send_message(message.chat.id, 
-            "/message\nEsta función envía un mensaje\n/document\nEsta función envía un documento\n/contact\nEsta función envía un contacto\n/audio\nEsta función envía un audio\n/location\nEsta función envía una ubicación\n/Photo\nEsta función envía una foto\n/video\nEsta función envía un video")
+    bot.send_message(
+        message.chat.id,
+        "/message\nEsta función envía un mensaje\n/document\nEsta función envía un documento\n/contact\nEsta función envía un contacto\n/audio\nEsta función envía un audio\n/location\nEsta función envía una ubicación\n/Photo\nEsta función envía una foto\n/video\nEsta función envía un video",
+    )
+
 
 # Función de mensaje
 # Message function
@@ -64,10 +67,10 @@ def mensaje(message):
 @bot.message_handler(commands=["/document"])
 def documento(message):
     try:
-          ruta_documento = '/docPdf.pdf'
-          with open(ruta_documento, 'rb') as documento:
-                bot.send_document(message, documento)
-          bot.send_message(message.chat.id,"Función realizada con éxito✅🎉🥳")
+        ruta_documento = "/docPdf.pdf"
+        with open(ruta_documento, "rb") as documento:
+            bot.send_document(message, documento)
+        bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
     except Exception as e:
         bot.send_message(message.chat.id, f"Error al enviar el documento: {str(e)}")
 
