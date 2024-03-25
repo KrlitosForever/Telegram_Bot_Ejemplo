@@ -67,7 +67,7 @@ def mensaje(message):
 @bot.message_handler(commands=["document"])
 def documento(message):
     try:
-        ruta_documento = keys.PATH_AUDIO
+        ruta_documento = keys.PATH_DOCUMENT
         with open(ruta_documento, "rb") as documento:
             bot.send_document(message, documento)
         bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
@@ -94,7 +94,7 @@ def contacto(message):
 def audio(message):
     try:
         # Ruta del archivo de audio en formato M4A que deseas enviar
-        audio_path = "audio.m4a"
+        audio_path = keys.PATH_AUDIO
 
         # Enviar el archivo de audio en formato M4A
         bot.send_audio(message.chat.id, open(audio_path, "rb"))
@@ -122,7 +122,7 @@ def location(message):
 def imagen(message):
     try:
         ruta_imagen = "image.jpg"
-        with open(ruta_imagen, "rb") as imagen:
+        with open(keys.PATH_IMAGE, "rb") as imagen:
             bot.send_photo(message, imagen)
         bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
     except Exception as e:
@@ -134,7 +134,7 @@ def imagen(message):
 @bot.message_handler(commands=["video"])
 def video(message):
     try:
-        video_ruta = "video.mp4"
+        video_ruta = "../video.mp4"
 
         bot.send_video(message.chat.id, open(video_ruta, "rb"))
     except Exception as e:
