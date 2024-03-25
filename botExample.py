@@ -68,7 +68,7 @@ def mensaje(message):
 def documento(message):
     try:
         with open(keys.PATH_DOCUMENT, "rb") as documento:
-            bot.send_document(message, documento)
+            bot.send_document(message.chat.id, documento)
         bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
     except Exception as e:
         bot.send_message(message.chat.id, f"Error al enviar el documento: {str(e)}")
@@ -118,7 +118,7 @@ def location(message):
 def imagen(message):
     try:
         with open(keys.PATH_IMAGE, "rb") as imagen:
-            bot.send_photo(message, imagen)
+            bot.send_photo(message.chat.id, imagen)
         bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
     except Exception as e:
         bot.send_message(message.chat.id, f"Error al enviar el documento: {str(e)}")
