@@ -74,7 +74,7 @@ def mensaje(message):
 @bot.message_handler(commands=['/document'])
 def documento(message):
     try:
-          ruta_documento = 'docPdf.pdf'
+          ruta_documento = '/docPdf.pdf'
           with open(ruta_documento, 'rb') as documento:
                 bot.send_document(message, documento)
           bot.send_message(message.chat.id,"Función realizada con éxito✅🎉🥳")
