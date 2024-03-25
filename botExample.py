@@ -47,7 +47,7 @@ def send_welcome(message):
 def info(message):
     bot.send_message(
         message.chat.id,
-        "/message\nEsta función envía un mensaje\n/document\nEsta función envía un documento\n/contact\nEsta función envía un contacto\n/audio\nEsta función envía un audio\n/location\nEsta función envía una ubicación\n/Photo\nEsta función envía una foto\n/video\nEsta función envía un video",
+        "/message\nEsta función envía un mensaje\n/document\nEsta función envía un documento\n/contact\nEsta función envía un contacto\n/audio\nEsta función envía un audio\n/location\nEsta función envía una ubicación\n/image\nEsta función envía una foto\n/video\nEsta función envía un video",
     )
 
 
@@ -67,8 +67,7 @@ def mensaje(message):
 @bot.message_handler(commands=["document"])
 def documento(message):
     try:
-        ruta_documento = keys.PATH_DOCUMENT
-        with open(ruta_documento, "rb") as documento:
+        with open(keys.PATH_DOCUMENT, "rb") as documento:
             bot.send_document(message, documento)
         bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
     except Exception as e:
@@ -93,11 +92,8 @@ def contacto(message):
 @bot.message_handler(commands=["audio"])
 def audio(message):
     try:
-        # Ruta del archivo de audio en formato M4A que deseas enviar
-        audio_path = keys.PATH_AUDIO
-
         # Enviar el archivo de audio en formato M4A
-        bot.send_audio(message.chat.id, open(audio_path, "rb"))
+        bot.send_audio(message.chat.id, open(keys.PATH_AUDIO, "rb"))
     except Exception as e:
         bot.send_message(message.chat.id, f"Error al enviar el audio: {str(e)}")
 
@@ -121,7 +117,6 @@ def location(message):
 @bot.message_handler(commands=["image"])
 def imagen(message):
     try:
-        ruta_imagen = "image.jpg"
         with open(keys.PATH_IMAGE, "rb") as imagen:
             bot.send_photo(message, imagen)
         bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
@@ -134,9 +129,7 @@ def imagen(message):
 @bot.message_handler(commands=["video"])
 def video(message):
     try:
-        video_ruta = "../video.mp4"
-
-        bot.send_video(message.chat.id, open(video_ruta, "rb"))
+        bot.send_video(message.chat.id, open(keys.PATH_VIDEO, "rb"))
     except Exception as e:
         bot.send_message(message.chat.id, f"Error al enviar el video: {str(e)}")
 
