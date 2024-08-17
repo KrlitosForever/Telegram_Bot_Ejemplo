@@ -37,7 +37,7 @@ def format_currency(value):
 def send_welcome(message):
     bot.send_message(
         message.chat.id,
-        "Hola, soy un 🤖 de Ejemplo.\nPuedes preguntar lo siguiente:⬇️\n/info\nPara conocer las funciones de este bot\n/info2\nPara conocer el menú botones\n/info3\npara conocer el panel",
+        "Hola, soy un 🤖 de Ejemplo.\nPuedes preguntar lo siguiente:⬇️\n/info\nPara conocer las funciones de este bot",
     )
 
 
@@ -94,6 +94,7 @@ def audio(message):
     try:
         # Enviar el archivo de audio en formato M4A
         bot.send_audio(message.chat.id, open(keys.PATH_AUDIO, "rb"))
+        bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
     except Exception as e:
         bot.send_message(message.chat.id, f"Error al enviar el audio: {str(e)}")
 
@@ -130,6 +131,7 @@ def imagen(message):
 def video(message):
     try:
         bot.send_video(message.chat.id, open(keys.PATH_VIDEO, "rb"))
+        bot.send_message(message.chat.id, "Función realizada con éxito✅🎉🥳")
     except Exception as e:
         bot.send_message(message.chat.id, f"Error al enviar el video: {str(e)}")
 
